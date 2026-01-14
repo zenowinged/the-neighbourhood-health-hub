@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer - NHHH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><button class="logo-btn"><a href="homepage.html" style="text-decoration: none; background-color: inherit; color: inherit"><img src="logo.png" alt="logo" class="logo"></a></button></li>
+             <li class="right-side"><button class="search-btn">🔍</button></li>
+            <li><button class="login-btn">Login</button></li>
+            <li><button class="baa-btn"><a href="appointment.html" style="text-decoration: none; background-color: inherit; color: inherit">Book an Appointment</a></button></li>
+        </ul>
+    </nav>
+    <!-- Heading -->
+    <div class="main-container">
+        <h1 class="page-heading">Switch to Neighborhood Health</h1>
+        
+        <!-- Form -->
+        <div class="form-box">
+            <p class="info-text" style="text-align: center; margin-bottom: 10px;">
+                We will handle the call to your old pharmacy. You don't need to do anything else.
+            </p>
+            <form>
+                <label for="name" class="label">Your Name</label>
+                <input type="text" class="name" placeholder="Enter your name" required>
+
+                <label class="label">Your Phone Number</label>
+                <input type="tel" class="ph-no" placeholder="Enter your number" required>
+
+                <label for="old-pharma" class="label">Name of Old Pharmacy</label>
+                <input type="text" class="old-pharma" required>
+
+                <label for="transfer" class="label">Medications to Transfer</label>
+                <textarea class="transfer"></textarea>
+
+                <button type="submit" class="submit-btn">Start Transfer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
