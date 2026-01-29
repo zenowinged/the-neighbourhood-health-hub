@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: rgb(252, 253, 255);
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: white;
+    padding: 6px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    height: 80px; 
+}
+
+.logo-btn {
+    border: none; background: none; cursor: pointer; 
+}
+
+.right-side {
+    margin-left: auto; 
+}
+
+/* Dropdown CSS */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn
+{
+    background-color: white;
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dropdown-content{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    transition: all 0.25s linear;
+    z-index: 20;
+    min-width: 180px;
+}
+
+.dropdown-btn:focus + .dropdown-content,
+.dropdown-content:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-content a{
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #004d40;
+}
+
+.search-btn, .login-btn { 
+    background: none; border: none; cursor: pointer; 
+}
+
+.login-btn{
+    font-weight: bold; color: #002D56; 
+}
+
+.baa-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #002D56;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.baa-btn:hover{
+    background-color:#004d40;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .navbar ul{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .dropdown-btn, .login-btn, .navbar a{
+        font-size: 13px;
+    }
+    .logo{
+        height: 50px;
+    }
+    .baa-btn{
+        font-size: 12px;
+    }
+
+    .reason1, .reason2, .reason3{ 
+        flex-direction: column;
+        text-align: center;
+    }
+    .reason1_img, .reason_2_pic, .reason_3_pic{ 
+        order: 1;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    .sc, .fa, .cc {
+        order: 2;
+    }
+    .psc, .pfa, .pcc {
+        order: 3; margin: 0 auto;
+    }
+}
+/* Heading and Background Pic */
+
+.heading-and-pic{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.2)), url(Gemini_Generated_Image_ipw3bjipw3bjipw3.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.solid-colour{
+    width: 30vw;
+    min-height: 100vh;
+    background-color: #15dcff;
+    padding: 60px 25px;
+}
+
+.company-name{
+    font-size: 50px; color: white; margin-top: 80px;
+}
+
+.motto { font-size: 20px; color: white; margin-top: 50px; 
+}
+
+/* why us*/
+
+.why-us { 
+    padding: 40px 20px; 
+}
+
+.reason1, .reason2, .reason3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.reason1_img, .reason_2_pic, .reason_3_pic{
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.sc, .fa, .cc { 
+    font-size: 30px; color: rgb(99, 99, 99); 
+}
+
+.psc, .pfa, .pcc {
+    font-size: 16px;
+    line-height: 26px;
+    color: gray;
+    max-width: 400px;
+}
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 480px){
+
+    .heading-and-pic, .why-us, footer{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .solid-colour{
+        width: 100%;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .company-name{ 
+        font-size: 32px; 
+        margin-top: 50px;
+        text-align: center; 
+    }
+    .motto{
+        font-size: 16px; 
+        margin-top: 20px; 
+        text-align: center; 
+    }
+
+    .reason1, .reason2, .reason3{
+        flex-direction: column;
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .reason1_img, .reason_2_pic, .reason_3_pic{
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+
+    .sc, .fa, .cc{
+        order: 2;
+        font-size: 24px;
+        margin-top: 15px;
+    }
+
+    .psc, .pfa, .pcc{
+        order: 3;
+        max-width: 100%;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+}
+
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+    .reason1, .reason2, .reason3{ 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .reason1_img, .reason_2_pic, .reason_3_pic{ 
+        order: 1; 
+        margin-bottom: 20px; 
+        width: 80%; 
+    }
+
+    .sc, .fa, .cc{ 
+        order: 2;
+    }
+
+    .psc, .pfa, .pcc{ 
+        order: 3; 
+        margin: 0 auto; 
+    }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1201px) {
+    .navbar{ 
+        padding: 6px 60px; 
+    }
+
+    .logo{ 
+        height: 90px; 
+    }
+
+    .solid-colour{
+        width: 25vw;
+    }
+
+    .company-name{ 
+        font-size: 60px; 
+    }
+
+    .motto{ 
+        font-size: 22px; 
+    }
+}
+
+.main-container{
+    background-color: white;
+    width: 50%;
+    margin: 50px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.page-heading{
+    text-align: center;
+    color: #002D56;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.name, .reason, .date, .time, .rx-no, .dob, .pickup-method, .ph-no, .old-pharma, .transfer{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 15px;
+    background-color: #002D56;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #004d40;
+}
+
+
+/* Phone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    .main-container {
+        width: 90%; 
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .page-heading {
+        font-size: 25px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .main-container {
+        width: 80%;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .main-container {
+        width: 60%;
+        margin-top: 80px;
+    }
+
+    .page-heading {
+        font-size: 40px;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1201px) {
+    .form-container {
+        width: 40%; 
+        max-width: 900px;
+        margin-top: 100px;
+    }
+
+    .name, .reason, .date, .time, .rx-no, .dob, .pickup-method, .ph-no, .old-pharma, .transfer{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 50px;
+    }
+}
+
+/* Our Approach */
+/* TEAM */
+.main-content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.subheading{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.team-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-card{
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.team-card:hover{
+    transform: translateY(-5px);
+}
+
+.team-info{
+    padding: 20px;
+    text-align: center;
+}
+
+.team-name{
+    font-size: 22px;
+    color: #002D56;
+    margin-bottom: 5px;
+}
+
+.doctors{
+    width: auto;
+    height:100px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.team-role{
+    color: #004d40;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.team-bio{
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Community page --- */
+.event1, .event2, .event3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.event-img{
+    width: 45%;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 8px;
+}
+
+.event-text{
+    width: 50%;
+}
+
+.intro-text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-date{
+    background-color: #002D56;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.event-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
