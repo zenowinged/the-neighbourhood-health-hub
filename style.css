@@ -70,7 +70,12 @@ body {
     min-width: 180px;
 }
 
+<<<<<<< HEAD
 .dropdown-btn:focus + .dropdown-content, .dropdown-content:hover{
+=======
+.dropdown-btn:focus + .dropdown-content,
+.dropdown-content:hover{
+>>>>>>> 8b36c1db85e00fee429c023b71b421155ca2f0e3
     visibility: visible;
     opacity: 1;
 }
