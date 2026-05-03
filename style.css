@@ -70,8 +70,7 @@ body {
     min-width: 180px;
 }
 
-.dropdown-btn:focus + .dropdown-content,
-.dropdown-content:hover{
+.dropdown-btn:focus + .dropdown-content, .dropdown-content:hover{
     visibility: visible;
     opacity: 1;
 }
